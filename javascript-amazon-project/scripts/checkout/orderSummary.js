@@ -120,8 +120,12 @@ export function renderOrderSummary () {
            removeFromCart(deleteProductId);
            
            const deleteButton = document.querySelector(
-               `.js-cart-item-${deleteProductId}`);
+               `.js-cart-item-${deleteProductId}`
+            );
            deleteButton.remove();
+
+           renderPaymentSummary();
+
            
        })
    });
